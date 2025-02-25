@@ -1,0 +1,49 @@
+.hidden {
+        display: none;
+    }
+
+#canvas {
+    z-index: 0;
+}
+
+#instructionBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    padding: 20px;
+    background: white;
+    border: 2px solid black;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+#instButton {
+    position: absolute;
+    top: 665px;
+    left: 665px;
+    width: 30px;
+    height: 30px;
+}
+
+#EndScreen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    padding: 20px;
+    background: white;
+    border: 2px solid black;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+#Time {
+    position: absolute;
+    top: 17px;
+    left: 355px;
+    font-weight: bold;
+    transform: translate(-50%, -50%);
+}

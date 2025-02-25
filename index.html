@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<title> DodgeMaster </title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<body>
+<canvas id="canvas" width="600" height="600" style="border:50px solid grey;">
+</canvas>
+</br>
+<button id="instButton" type="button" title="Instructions" onclick="showInstructions()"> ? </button>
+
+<div id="instructionBox" class="hidden">
+    <p>Welcome to DodgeMaster! Use arrow keys or the left control joystick to avoid the red obstacles, collect the coins, and reach the green finish zone to win the game.</p>
+    <button onclick="hideInstructions()">Close</button>
+</div>
+
+<div id="EndScreen" class="hidden">
+    <p> Congratulations  &#x1F38A;</p>
+    <p> Your Final Time Was: </p>
+    <p id=finalTimeP></p>
+    <button onclick="hideEnd()">Close</button>
+</div>
+
+  <p id="Time">Time: <span id="display">00:00:00</span></p>
+
+  <link rel="stylesheet" href="style.css">
+  <script src = "script.js"></script>
+</body>

@@ -42,8 +42,24 @@
 
 #Time {
     position: absolute;
-    top: 17px;
+    top: 9px;
     left: 355px;
     font-weight: bold;
     transform: translate(-50%, -50%);
+}
+
+#Death {
+    position: absolute;
+    top: 25px;
+    left: 355px;
+    font-weight: bold;
+    transform: translate(-50%, -50%);
+}
+
+#finalTimeP {
+    font-weight: bold;
+}
+
+#deaths {
+    font-weight: bold;  
 }

@@ -133,6 +133,7 @@ class Player extends GameObject {
                     this.y -= this.vy * secondsPassed;
                     this.vy = 0;
                 } else if (gameObjects[i] instanceof Obstacle) {
+                    death++;
                     resetGame();
                 } else if (gameObjects[i] instanceof EndZone) {
                     if (totalCoins === 0 && !ended) {
@@ -178,10 +179,12 @@ let coinSound = new Audio('https://codehs.com/uploads/fc7015ad271cdcd66604a896d3
 let oofSound = new Audio('https://codehs.com/uploads/cb769d486596dccfacca9e19e97ac369');
 let YAYSound = new Audio('https://codehs.com/uploads/1db7f916e3417f08cce7db84256aaeac');
 const display = document.getElementById('display');
+const display2 = document.getElementById('display2');
 let startTime;
 let running = false;
 let intervalId;
 let finalTime;
+let death = 0;
 
 window.onload = init;
 
@@ -332,6 +335,7 @@ function resetGame() {
 function endGame() {
     startStop();
     finalTimeP.innerText = finalTime;
+    deaths.innerText = death;
     YAYSound.play();
     showEnd();
     ended = true;
@@ -373,6 +377,7 @@ function updateDisplay() {
 
     finalTime = `${formattedMinutes}:${formattedSeconds}:${formattedMilliseconds}`;
     display.textContent = `${formattedMinutes}:${formattedSeconds}:${formattedMilliseconds}`;
+    display2.textContent = death;
 }
 
 function startStop() {
